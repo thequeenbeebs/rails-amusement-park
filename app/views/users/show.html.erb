@@ -1,0 +1,11 @@
+<p>Name: <%= @user.name %></p>
+<p>Tickets: <%= @user.tickets %></p>
+<p>Mood: <%= @user.mood %></p>
+<p>Height: <%= @user.height %></p>
+
+<% if @user.admin == true %>
+    <p> ADMIN </p>
+<% end %>
+
+<%= link_to "See attractions", attractions_path %>
+<%= link_to "Log Out", '/logout', method: :post%>
