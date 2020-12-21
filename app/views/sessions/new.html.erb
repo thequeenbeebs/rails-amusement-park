@@ -1,0 +1,15 @@
+<form method='post'>
+    <p>
+        <label for="name">Your name:</label>
+        <select name="user[name]" id="user_name">
+        <%= User.all.each do |user| %>
+            <option value="<%= user.name %>"><%= user.name %></option>
+        <% end %>
+        </select>
+    </p>
+    <p>
+        <label for="password">Your password:</label>
+        <input type="password" name="user_password" id="password">
+    </p>
+  <input type='submit' value='Sign In'>
+</form> 
